@@ -1,0 +1,78 @@
+
+$footer-color: #686de0;
+$page-color: #c3cfe2;
+$padding: 20px;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@mixin textDesign {
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+
+@mixin flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.page{
+    font-family:'Roboto', sans-serif;
+    font-size: 1.1em;
+    background-color: $page-color;
+
+    &--flex-container{
+        margin: 20px;
+        @include flex-container;
+        
+        border-radius: 20px;
+        filter: drop-shadow(2px 4px 4px rgb(104, 103, 103));
+    }
+}
+
+.testimonial__text{
+    background-color: white;
+    color: rgb(48, 47, 47);
+    padding: 30px;
+    line-height: 38px;
+    padding-bottom: 80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+   
+
+}
+
+.footer{
+    width: 100%;
+    background-color: $footer-color;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    &--flex{
+        @include flex-container;
+        transform: translateY(-50px);  
+    }
+
+    &__image{
+        width: 100px;
+        border-radius: round($number: 100px);
+        border: white solid 4px;
+    }
+    &__title{
+        text-transform: uppercase;
+       @include textDesign;
+       color: white;
+    }
+
+    &__mail{
+        @include textDesign;
+        color: $page-color;
+
+    }
+}
+
+
+
